@@ -65,23 +65,23 @@ Les clients sont exposés automatiquement par **Spring Data REST** grâce à `@R
 
 Tous les clients (`/customers`) :
 
-![Liste des clients](screenShots/customerScreens/1-cutomers.png)
+<a href="screenShots/customerScreens/1-cutomers.png"><img src="screenShots/customerScreens/1-cutomers.png" alt="Liste des clients" width="600"></a>
 
 Un client par son id (`/customers/1`) :
 
-![Client par id](screenShots/customerScreens/2-customer-by-id.png)
+<a href="screenShots/customerScreens/2-customer-by-id.png"><img src="screenShots/customerScreens/2-customer-by-id.png" alt="Client par id" width="600"></a>
 
 Pagination (`/customers?page=0&size=2`) :
 
-![Pagination des clients](screenShots/customerScreens/3-customers-pagination.png)
+<a href="screenShots/customerScreens/3-customers-pagination.png"><img src="screenShots/customerScreens/3-customers-pagination.png" alt="Pagination des clients" width="600"></a>
 
 Tri (`/customers?sort=name,desc`) :
 
-![Tri des clients](screenShots/customerScreens/4-customers-sort.png)
+<a href="screenShots/customerScreens/4-customers-sort.png"><img src="screenShots/customerScreens/4-customers-sort.png" alt="Tri des clients" width="600"></a>
 
 Base de données H2 :
 
-![Console H2 clients](screenShots/customerScreens/5-h2-console.png)
+<a href="screenShots/customerScreens/5-h2-console.png"><img src="screenShots/customerScreens/5-h2-console.png" alt="Console H2 clients" width="600"></a>
 
 ---
 
@@ -91,23 +91,23 @@ Les produits sont exposés de la même façon avec **Spring Data REST**.
 
 Tous les produits (`/products`) :
 
-![Liste des produits](screenShots/inventoryScreens/1-products.png)
+<a href="screenShots/inventoryScreens/1-products.png"><img src="screenShots/inventoryScreens/1-products.png" alt="Liste des produits" width="600"></a>
 
 Un produit par son id :
 
-![Produit par id](screenShots/inventoryScreens/2-product-by-id.png)
+<a href="screenShots/inventoryScreens/2-product-by-id.png"><img src="screenShots/inventoryScreens/2-product-by-id.png" alt="Produit par id" width="600"></a>
 
 Pagination :
 
-![Pagination des produits](screenShots/inventoryScreens/3-products-pagination.png)
+<a href="screenShots/inventoryScreens/3-products-pagination.png"><img src="screenShots/inventoryScreens/3-products-pagination.png" alt="Pagination des produits" width="600"></a>
 
 Tri :
 
-![Tri des produits](screenShots/inventoryScreens/4-products-sort.png)
+<a href="screenShots/inventoryScreens/4-products-sort.png"><img src="screenShots/inventoryScreens/4-products-sort.png" alt="Tri des produits" width="600"></a>
 
 Base de données H2 :
 
-![Console H2 produits](screenShots/inventoryScreens/5-h2-console.png)
+<a href="screenShots/inventoryScreens/5-h2-console.png"><img src="screenShots/inventoryScreens/5-h2-console.png" alt="Console H2 produits" width="600"></a>
 
 ---
 
@@ -121,39 +121,39 @@ Ils lisent uniquement la base de billing-service : le champ `customer` reste à 
 
 Toutes les factures (`/bills`) :
 
-![Liste des factures](screenShots/billingScreens/1-bills.png)
+<a href="screenShots/billingScreens/1-bills.png"><img src="screenShots/billingScreens/1-bills.png" alt="Liste des factures" width="600"></a>
 
 Une facture par son id (`/bills/1`) :
 
-![Facture par id](screenShots/billingScreens/2-bill-by-id.png)
+<a href="screenShots/billingScreens/2-bill-by-id.png"><img src="screenShots/billingScreens/2-bill-by-id.png" alt="Facture par id" width="600"></a>
 
 Pagination :
 
-![Pagination des factures](screenShots/billingScreens/3-bills-pagination.png)
+<a href="screenShots/billingScreens/3-bills-pagination.png"><img src="screenShots/billingScreens/3-bills-pagination.png" alt="Pagination des factures" width="600"></a>
 
 Tri :
 
-![Tri des factures](screenShots/billingScreens/4-bills-sort.png)
+<a href="screenShots/billingScreens/4-bills-sort.png"><img src="screenShots/billingScreens/4-bills-sort.png" alt="Tri des factures" width="600"></a>
 
 Base de données H2 :
 
-![Console H2 factures](screenShots/billingScreens/5-h2-console.png)
+<a href="screenShots/billingScreens/5-h2-console.png"><img src="screenShots/billingScreens/5-h2-console.png" alt="Console H2 factures" width="600"></a>
 
 Lignes de facture (`/productItems`) :
 
-![Lignes de facture](screenShots/billingScreens/6-product-items.png)
+<a href="screenShots/billingScreens/6-product-items.png"><img src="screenShots/billingScreens/6-product-items.png" alt="Lignes de facture" width="600"></a>
 
 ### Communication entre services avec OpenFeign
 
 Le contrôleur `BillRestController` (`/api/bills/{id}`) récupère la facture, puis appelle customer-service et inventory-service pour remplir le client et les produits :
 
-![Facture complète avec OpenFeign](screenShots/billingScreens/7-bill-details.png)
+<a href="screenShots/billingScreens/7-bill-details.png"><img src="screenShots/billingScreens/7-bill-details.png" alt="Facture complète avec OpenFeign" width="600"></a>
 
 ### Circuit Breaker (Resilience4J)
 
 Quand customer-service est arrêté, billing-service ne plante pas : la méthode de secours (fallback) renvoie un client par défaut.
 
-![Circuit Breaker](screenShots/billingScreens/8-circuit-breaker.png)
+<a href="screenShots/billingScreens/8-circuit-breaker.png"><img src="screenShots/billingScreens/8-circuit-breaker.png" alt="Circuit Breaker" width="600"></a>
 
 ---
 
@@ -161,7 +161,7 @@ Quand customer-service est arrêté, billing-service ne plante pas : la méthode
 
 Les services inscrits dans l'annuaire, avec leurs noms et leurs adresses :
 
-![Eureka](screenShots/discoveryScreens/1-noms-et-adresses-des-services-enregistrés.png)
+<a href="screenShots/discoveryScreens/1-noms-et-adresses-des-services-enregistrés.png"><img src="screenShots/discoveryScreens/1-noms-et-adresses-des-services-enregistrés.png" alt="Eureka" width="600"></a>
 
 ---
 
@@ -171,15 +171,15 @@ Les routes sont générées dynamiquement à partir d'Eureka : le nom du service
 
 Customer-service via la Gateway (`/CUSTOMER-SERVICE/customers`) :
 
-![Gateway clients](screenShots/gatewayScreens/1-gateway-customer-service.png)
+<a href="screenShots/gatewayScreens/1-gateway-customer-service.png"><img src="screenShots/gatewayScreens/1-gateway-customer-service.png" alt="Gateway clients" width="600"></a>
 
 Inventory-service via la Gateway (`/INVENTORY-SERVICE/products`) :
 
-![Gateway produits](screenShots/gatewayScreens/2-gateway-inventory-service.png)
+<a href="screenShots/gatewayScreens/2-gateway-inventory-service.png"><img src="screenShots/gatewayScreens/2-gateway-inventory-service.png" alt="Gateway produits" width="600"></a>
 
 Billing-service via la Gateway (`/BILLING-SERVICE/api/bills/1`) :
 
-![Gateway factures](screenShots/gatewayScreens/3-gateway-billing-service.png)
+<a href="screenShots/gatewayScreens/3-gateway-billing-service.png"><img src="screenShots/gatewayScreens/3-gateway-billing-service.png" alt="Gateway factures" width="600"></a>
 
 ---
 
@@ -196,23 +196,23 @@ Les fichiers de configuration sont stockés dans un dépôt GitHub séparé : **
 
 Paramètres globaux (`/application/default`) :
 
-![Paramètres globaux](screenShots/configScreens/1-global-params.png)
+<a href="screenShots/configScreens/1-global-params.png"><img src="screenShots/configScreens/1-global-params.png" alt="Paramètres globaux" width="600"></a>
 
 Paramètres de customer-service selon le profil :
 
-![Profil par défaut](screenShots/configScreens/2-customer-service-default-params.png)
+<a href="screenShots/configScreens/2-customer-service-default-params.png"><img src="screenShots/configScreens/2-customer-service-default-params.png" alt="Profil par défaut" width="600"></a>
 
-![Profil dev](screenShots/configScreens/3-customer-service-dev-params.png)
+<a href="screenShots/configScreens/3-customer-service-dev-params.png"><img src="screenShots/configScreens/3-customer-service-dev-params.png" alt="Profil dev" width="600"></a>
 
-![Profil prod](screenShots/configScreens/4-customer-service-prod-params.png)
+<a href="screenShots/configScreens/4-customer-service-prod-params.png"><img src="screenShots/configScreens/4-customer-service-prod-params.png" alt="Profil prod" width="600"></a>
 
 Lecture des paramètres dans customer-service avec `@Value` :
 
-![Test de configuration 1](screenShots/configScreens/5-customer-service-config-test1.png)
+<a href="screenShots/configScreens/5-customer-service-config-test1.png"><img src="screenShots/configScreens/5-customer-service-config-test1.png" alt="Test de configuration 1" width="600"></a>
 
 Lecture des paramètres avec `@ConfigurationProperties` (record `CustomerConfigParams`) :
 
-![Test de configuration 2](screenShots/configScreens/6-customer-service-config-test2.png)
+<a href="screenShots/configScreens/6-customer-service-config-test2.png"><img src="screenShots/configScreens/6-customer-service-config-test2.png" alt="Test de configuration 2" width="600"></a>
 
 ---
 
